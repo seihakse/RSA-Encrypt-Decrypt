@@ -1,8 +1,5 @@
-/* Import Fredoka font */
-@import url('https://fonts.googleapis.com/css2?family=Fredoka&display=swap');
-
 body {
-    font-family: 'Fredoka', Arial, sans-serif;
+    font-family: 'Fredoka', sans-serif;
     background: linear-gradient(to right, #5756D6, #C779D8);
     margin: 0;
     padding: 0;
@@ -12,20 +9,26 @@ body {
     min-height: 100vh;
 }
 
+.main-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    width: 90%;
+    max-width: 1200px;
+}
+
 .container {
     background-color: #1A1A1A;
     color: #fff;
-    padding: 20px;
+    padding: 30px;
     border-radius: 10px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
     text-align: left;
-    max-width: 90%;
-    width: 500px;
-    margin: 35px;
+    flex: 1;
 }
 
 h1 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     margin-bottom: 20px;
 }
 
@@ -47,56 +50,60 @@ label {
 
 input[type="text"],
 textarea {
+    font-family: 'Fredoka', sans-serif;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 1rem;
     text-align: left;
-    font-family: 'Fredoka', Arial, sans-serif; /* Apply Fredoka font to inputs and textarea */
 }
 
 textarea {
     resize: vertical;
-    min-height: 100px;
+    min-height: 80px;
 }
 
 .buttons {
     display: flex;
     justify-content: center;
-    gap: 15px;
+    gap: 10px;
     margin-top: 20px;
 }
 
 button {
     background-color: #5271ff;
     color: #fff;
-    padding: 15px 30px; /* Increase button size */
+    padding: 10px 20px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    font-family: 'Fredoka', Arial, sans-serif; /* Apply Fredoka font to buttons */
-    font-size: 1rem;
+    font-family: 'Fredoka', sans-serif;
+    font-size: 1.1rem;
+}
+
+button#reset-btn{
+    background-color: #ff3131;
+}
+
+button#caesar-reset-btn {
+    background-color: #ff3131; /* Specific style for Caesar container reset button */
 }
 
 button:hover {
     background-color: #C779D8;
 }
 
-#reset-btn {
-    background-color: #ff3131;
-}
-
 .results {
     display: flex;
     flex-direction: column;
-    gap: 15px;
-    margin-top: 30px;
+    gap: 10px;
+    margin-top: 20px;
 }
 
 .result {
     background-color: #282828;
-    padding: 15px;
+    padding: 10px;
     border-radius: 5px;
 }
 

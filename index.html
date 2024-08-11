@@ -3,77 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RSA Encryption & Decryption</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Math Project</title>
     <link href="https://fonts.googleapis.com/css2?family=Fredoka&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <h1>RSA Encryption & Decryption</h1>
-
-        <div class="input-fields">
-            <div class="field">
-                <label for="p-value">Enter P Value:</label>
-                <input type="text" id="p-value" placeholder="Enter P Value">
+    <div class="main-container">
+        <!-- RSA Encryption & Decryption Section -->
+        <div class="container">
+            <h1>RSA Encryption & Decryption</h1>
+            <div class="input-fields">
+                <div class="field">
+                    <label for="p-value">Enter p Value:</label>
+                    <input type="text" id="p-value" placeholder="Enter P Value">
+                </div>
+                <div class="field">
+                    <label for="q-value">Enter q Value:</label>
+                    <input type="text" id="q-value" placeholder="Enter Q Value">
+                </div>
+                <div class="field">
+                    <label for="e-value">Enter e Value:</label>
+                    <input type="text" id="e-value" placeholder="Enter E Value">
+                </div>
+                <div class="field">
+                    <label for="message">Enter your message here:</label>
+                    <textarea id="message" placeholder="Enter your message here"></textarea>
+                </div>
             </div>
-            <div class="field">
-                <label for="q-value">Enter Q Value:</label>
-                <input type="text" id="q-value" placeholder="Enter Q Value">
+            <div class="buttons">
+                <button id="encrypt-btn">Encryp</button>
+                <button id="decrypt-btn">Decryp</button>
+                <button id="reset-btn">Reset</button>
             </div>
-            <div class="field">
-                <label for="e-value">Enter E Value:</label>
-                <input type="text" id="e-value" placeholder="Enter E Value">
+            <div class="results">
+                <div class="result">
+                    <label>Encrypted Message:</label>
+                    <span id="encrypted-message"></span>
+                </div>
+                <div class="result">
+                    <label>Decrypted Message:</label>
+                    <span id="decrypted-message"></span>
+                </div>
+                <div class="result">
+                    <label>This is n Value:</label>
+                    <span id="n-value"></span>
+                </div>
             </div>
-            <div class="field">
-                <label for="message">Enter your message here:</label>
-                <textarea id="message" placeholder="Enter your message here"></textarea>
-            </div>
+            <p class="footer"></p>
         </div>
-
-        <div class="buttons">
-            <button id="encrypt-btn">Encrypt</button>
-            <button id="decrypt-btn">Decrypt</button>
-            <button id="reset-btn">Reset</button>
+        
+        <!-- Classical Cryptography - Caesar Cipher Section -->
+        <div class="container">
+            <h1>Classical Cryptography - Caesar Cipher</h1>
+            <div class="input-fields">
+                <div class="field">
+                    <label for="caesar-text">Enter text to encrypt:</label>
+                    <textarea id="caesar-text" placeholder="Enter text here"></textarea>
+                </div>
+                <div class="field">
+                    <label for="caesar-key">Encryption Key:</label>
+                    <input type="text" id="caesar-key" placeholder="Enter Key">
+                </div>
+            </div>
+            <div class="buttons">
+                <button id="caesar-encrypt-btn">Encrypt</button>
+                <button id="caesar-reset-btn">Reset</button>
+            </div>
+            <div class="results">
+                <div class="result">
+                    <label>Encrypted Text:</label>
+                    <span id="caesar-encrypted-text"></span>
+                </div>
+            </div>
+            <p class="footer"></p>
         </div>
-
-        <div class="results">
-            <div class="result">
-                <label>Encrypted Message:</label>
-                <span id="encrypted-message"></span>
-            </div>
-            <div class="result">
-                <label>Decrypted Message:</label>
-                <span id="decrypted-message"></span>
-            </div>
-        </div>
-
-        <footer class="footer">
-            <p>Team 9</p>
-            <div class="team-members">
-                <div class="team-member">
-                    <img src="Sunchung.jpg" alt="">
-                    <p>SUNCHUNG</p>
-                </div>
-                <div class="team-member">
-                    <img src="Sunhim.jpg" alt="">
-                    <p>SUNHIM</p>
-                </div>
-                <div class="team-member">
-                    <img src="Seihak.jpg" alt="">
-                    <p>SEIHAK</p>
-                </div>
-                <div class="team-member">
-                    <img src="Bunnareth.jpg" alt="">
-                    <p>BUNNARETH</p>
-                </div>
-                <div class="team-member">
-                    <img src="Pisal.jpg" alt="">
-                    <p>PISAL</p>
-                </div>
-            </div>
-        </footer>
     </div>
-
     <script src="script.js"></script>
 </body>
 </html>
