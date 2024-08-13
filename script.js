@@ -119,6 +119,29 @@ function caesarEncrypt() {
   document.getElementById('caesar-encrypted-text').textContent = encryptedText;
 }
 
+//Functionn for caesar Cipher ddecryption
+function caesarDecrypt() {
+  const encryptedText = document.getElementById('caesar-encrypted-text').textContent;
+  const key = parseInt(document.getElementById('caesar-key').value);
+  let decryptedText = '';
+
+  for (let i = 0; i < encryptedText.length; i++) {
+      let charCode = encryptedText.charCodeAt(i);
+
+      if (charCode >= 65 && charCode <= 90) {
+          // Uppercase letters
+          charCode = ((charCode - 65 - key + 26) % 26) + 65;
+      } else if (charCode >= 97 && charCode <= 122) {
+          // Lowercase letters
+          charCode = ((charCode - 97 - key + 26) % 26) + 97;
+      }
+
+      decryptedText += String.fromCharCode(charCode);
+  }
+
+  document.getElementById('caesar-decrypted-text').textContent = decryptedText;
+}
+
 // Function to clear the Caesar Cipher input and output fields
 function caesarClean() {
   document.getElementById('caesar-text').value = '';
@@ -128,4 +151,5 @@ function caesarClean() {
 
 // Event listeners for Caesar Cipher buttons
 document.getElementById('caesar-encrypt-btn').addEventListener('click', caesarEncrypt);
+document.getElementById('caesar-decrypt-btn').addEventListener('click', caesarDecrypt);
 document.getElementById('caesar-reset-btn').addEventListener('click', caesarClean);

@@ -5,97 +5,117 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Math Project</title>
     <link href="https://fonts.googleapis.com/css2?family=Fredoka&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Fredoka', sans-serif;
+            background: linear-gradient(to right, #5756D6, #C779D8);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .main-container {
+            max-width: 800px;
+            width: 100%;
+            margin-top: 50px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .team-members {
+            margin-bottom: 40px;
+        }
+
+        .team-member {
+            font-size: 1.2rem;
+            margin: 5px 0;
+        }
+
+        .links {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .links a {
+            font-size: 1.5rem;
+            text-decoration: none;
+            color: #5271ff;
+            background-color: #fff;
+            padding: 15px 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease;
+        }
+
+        .links a:hover {
+            background-color: #5271ff;
+            color: #fff;
+        }
+        .footer {
+            margin-top: 30px;
+            font-size: 2rem;
+            opacity: 1;
+            text-align: center;
+        }
+        
+        .team-members {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 10px;
+            flex-wrap: wrap;
+        }
+        
+        .team-member {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 5px;
+        }
+        
+        
+        .team-member p {
+            margin: 0;
+            font-size: 1.25rem;
+        }
+    </style>
 </head>
 <body>
     <div class="main-container">
-        <!-- RSA Encryption & Decryption Section -->
-        <div class="container">
-            <h1>RSA Encryption & Decryption</h1>
-            <div class="input-fields">
-                <div class="field">
-                    <label for="p-value">Enter p Value:</label>
-                    <input type="text" id="p-value" placeholder="Enter P Value">
-                </div>
-                <div class="field">
-                    <label for="q-value">Enter q Value:</label>
-                    <input type="text" id="q-value" placeholder="Enter Q Value">
-                </div>
-                <div class="field">
-                    <label for="e-value">Enter e Value:</label>
-                    <input type="text" id="e-value" placeholder="Enter E Value">
-                </div>
-                <div class="field">
-                    <label for="message">Enter your message here:</label>
-                    <textarea id="message" placeholder="Enter your message here"></textarea>
-                </div>
-            </div>
-            <div class="buttons">
-                <button id="encrypt-btn">Encryp</button>
-                <button id="decrypt-btn">Decryp</button>
-                <button id="reset-btn">Reset</button>
-            </div>
-            <div class="results">
-                <div class="result">
-                    <label>Encrypted Message:</label>
-                    <span id="encrypted-message"></span>
-                </div>
-                <div class="result">
-                    <label>Decrypted Message:</label>
-                    <span id="decrypted-message"></span>
-                </div>
-                <div class="result">
-                    <label>This is n Value:</label>
-                    <span id="n-value"></span>
-                </div>
-            </div>
-            <p class="footer"></p>
+        <h1>MATH PROJECT</h1>
+        <div class="team-members">
+            <h2>Team 09</h2>
         </div>
-        
-        <!-- Classical Cryptography - Caesar Cipher Section -->
-        <div class="container">
-            <h1>Classical Cryptography - Caesar Cipher</h1>
-            <div class="input-fields">
-                <div class="field">
-                    <label for="caesar-text">Enter text to encrypt:</label>
-                    <textarea id="caesar-text" placeholder="Enter text here"></textarea>
-                </div>
-                <div class="field">
-                    <label for="caesar-key">Encryption Key:</label>
-                    <input type="text" id="caesar-key" placeholder="Enter Key">
-                </div>
-            </div>
-            <div class="buttons">
-                <button id="caesar-encrypt-btn">Encrypt</button>
-                <button id="caesar-reset-btn">Reset</button>
-            </div>
-            <div class="results">
-                <div class="result">
-                    <label>Encrypted Text:</label>
-                    <span id="caesar-encrypted-text"></span>
-                </div>
-            </div>
-            <p class="footer"></p>
-            <p>Team Members</p>
-            <div class="team-members">
-                <div class="team-member">
-                    <p>HAY Sunchung</p>
-                </div>
-                <div class="team-member">
-                    <p>HONG Sunhim</p>
-                </div>
-                <div class="team-member">
-                    <p>SE Seihak</p>
-                </div>
-                <div class="team-member">
-                    <p>SENG Pisal</p>
-                </div>
-                <div class="team-member">
-                    <p>HOR Bunnareth</p>
-                </div>
-    
+        <div class="links">
+            <a href="rsa.html">RSA Encryption & Decryption</a>
+            <a href="caesar.html">Classical Cryptography - Caesar Cipher</a>
         </div>
+        <p class="footer"></p>
+        <p>Team Members</p>
+        <div class="team-members">
+            <div class="team-member">
+                <p>HAY Sunchung</p>
+            </div>
+            <div class="team-member">
+                <p>HONG Sunhim</p>
+            </div>
+            <div class="team-member">
+                <p>SE Seihak</p>
+            </div>
+            <div class="team-member">
+                <p>SENG Pisal</p>
+            </div>
+            <div class="team-member">
+                <p>HOR Bunnareth</p>
+            </div>
     </div>
-    <script src="script.js"></script>
 </body>
 </html>
