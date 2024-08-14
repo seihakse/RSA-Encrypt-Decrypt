@@ -88,6 +88,7 @@ function caesarEncrypt() {
     document.getElementById('caesar-text').value = '';
     document.getElementById('caesar-key').value = '';
     document.getElementById('caesar-encrypted-text').textContent = '';
+    document.getElementById('caesar-decrypted-text').textContent = '';
   }
   
   // Event listeners for Caesar Cipher buttons

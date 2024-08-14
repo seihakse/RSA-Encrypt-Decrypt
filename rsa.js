@@ -96,25 +96,3 @@ function modPow(base, exp, modulus) {
   document.getElementById('decrypt-btn').addEventListener('click', decrypt);
   document.getElementById('reset-btn').addEventListener('click', clean);
   
-  // Function for Caesar Cipher encryption
-  function caesarEncrypt() {
-    const text = document.getElementById('caesar-text').value;
-    const key = parseInt(document.getElementById('caesar-key').value);
-    let encryptedText = '';
-  
-    for (let i = 0; i < text.length; i++) {
-        let charCode = text.charCodeAt(i);
-  
-        if (charCode >= 65 && charCode <= 90) {
-            // Uppercase letters
-            charCode = ((charCode - 65 + key) % 26) + 65;
-        } else if (charCode >= 97 && charCode <= 122) {
-            // Lowercase letters
-            charCode = ((charCode - 97 + key) % 26) + 97;
-        }
-  
-        encryptedText += String.fromCharCode(charCode);
-    }
-  
-    document.getElementById('caesar-encrypted-text').textContent = encryptedText;
-  }
